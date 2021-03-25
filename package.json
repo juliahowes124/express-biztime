@@ -1,7 +1,6 @@
 {
   "name": "express-biztime",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^5.0.0-alpha.8",
     "pg": "^8.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliahowes124/express-biztime.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/juliahowes124/express-biztime/issues"
+  },
+  "homepage": "https://github.com/juliahowes124/express-biztime#readme",
+  "description": ""
 }
