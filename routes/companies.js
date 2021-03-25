@@ -41,12 +41,19 @@ router.use('/:code', async (req, res, next)=> {
         return next(new NotFoundError())
     };
     // is this kosher?
-    req.requestedCompany = result.rows[0];
+    req.requestedCompany = result.rows[0]; //make special key for data
     return next();
 });
 
 router.get('/:code', async (req, res) => {
     let company = req.requestedCompany;
+    let invoiceQuery = await db.query(`
+        SELECT id, comp_code, amt, paid, add_date, paid_date
+        FROM invoices
+        WHERE comp_code = $1
+    `, [req.params.code]);
+
+    company.invoices = invoiceQuery.rows;
     return res.json({company});
 });
 

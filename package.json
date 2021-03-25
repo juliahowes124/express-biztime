@@ -21,5 +21,8 @@
     "url": "https://github.com/juliahowes124/express-biztime/issues"
   },
   "homepage": "https://github.com/juliahowes124/express-biztime#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "supertest": "^6.1.3"
+  }
 }
